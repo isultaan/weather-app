@@ -20,7 +20,6 @@ body {
   background: var(--bg-dark);
 }
 
-/* Main card container */
 .card {
   width: 90%;
   max-width: var(--card-width);
@@ -33,7 +32,6 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Search bar styles */
 .search {
   width: 100%;
   display: flex;
@@ -80,13 +78,11 @@ body {
   transform: scale(0.95);
 }
 
-/* Weather display icon */
 .weather-icon {
   width: 170px;
   margin-top: 30px;
 }
 
-/* Weather information styles */
 .weather h1 {
   font-size: 80px;
   font-weight: 500;
@@ -98,7 +94,6 @@ body {
   margin-top: -10px;
 }
 
-/* Weather details grid */
 .details {
   display: flex;
   align-items: center;
@@ -108,7 +103,6 @@ body {
   gap: 20px;
 }
 
-/* Details column */
 .col {
   display: flex;
   align-items: center;
@@ -123,12 +117,10 @@ body {
   object-fit: contain;
 }
 
-/* Humidity and wind values */
 .humidity, .wind {
   font-size: 28px;
 }
 
-/* Error message styles */
 .error {
   text-align: left;
   margin-top: 10px;
