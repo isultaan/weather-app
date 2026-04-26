@@ -1,7 +1,6 @@
 const apiKey = "690f11b9b4a946cacd0647ae0f14676f";
 const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
 
-// Map weather conditions to icon paths
 const weatherIcons = {
   "Clouds": "images/cloud.png",
   "Clear": "images/icons8-clear-sky-64.png",
@@ -10,15 +9,12 @@ const weatherIcons = {
   "Mist": "images/mist.png"
 };
 
-// Event listeners setup
 document.addEventListener("DOMContentLoaded", () => {
   const searchBtn = document.getElementById("searchBtn");
   const cityInput = document.getElementById("city");
   
-  // Search on button click
   searchBtn.addEventListener("click", getWeather);
   
-  // Search on Enter key press
   cityInput.addEventListener("keypress", (e) => {
     if (e.key === "Enter") {
       getWeather();
@@ -28,8 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 async function getWeather() {
   const city = document.getElementById("city").value.trim();
-  
-  // Validate that city name is not empty
+
   if (!city) {
     document.getElementById("error").style.display = "block";
     document.getElementById("error").innerHTML = "Please enter a city name";
@@ -50,7 +45,6 @@ async function getWeather() {
     } else {
       const data = await response.json();
 
-      // Validate required data exists
       if (!data.name || !data.main || !data.weather || !data.wind) {
         throw new Error("Invalid weather data received");
       }
